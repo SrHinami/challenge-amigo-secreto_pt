@@ -1,6 +1,7 @@
 // Primeiro preciso criar as variáveis para guardar os nomes
 let amigos = [];
 
+
 //Função para adicionar um amigo
 function adicionarAmigo() {
     const inputAmigo = document.getElementById('amigo');
@@ -24,7 +25,7 @@ amigos.push(nomeAmigo);
 
 
 //Limpar o campo de entrada
-inputAmigo.ariaValu = "";
+inputAmigo.value = "";
 
 //Atualizar a lista
 atualizarLista();
@@ -32,7 +33,7 @@ atualizarLista();
 
 function atualizarLista() {
     const listaAmigos = document.getElementById('listaAmigos');
-    listaAmigos.innerHTML = ''; // Limpar o campo
+    listaAmigos.innerHTML = ""; // Limpar o campo
     for(let i = 0; i <amigos.length; i++) {
         const li = document.createElement('li');
         li.textContent = amigos[i];
