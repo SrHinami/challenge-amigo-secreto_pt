@@ -4,10 +4,11 @@ let amigos = [];
 //Função para adicionar um amigo
 function adicionarAmigo() {
     const inputAmigo = document.getElementById('amigo');
-    const nomeAmigo = inputAmigo.ariaValueMax.trim();
+    const nomeAmigo = inputAmigo.value.trim();
+    inputAmigo.Value = "";
 
 //Ter a certeza que o campo não ficou vazio
-if (nome === "") {
+if (nomeAmigo == "") {
     alert('Por favor, insira um nome.');
     return;
 }
@@ -42,5 +43,16 @@ function atualizarLista() {
 }
 
 function sortearAmigo() {
-    if(amigos)
+    if(amigos.length == 0) {
+        alert('Não tem como sortear. É preciso ter pelo menos um.');
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    const amigoSorteado = amigos[indiceAleatorio]; 
+
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `Amigo sorteado: <strong>${amigoSorteado}</strong`; // strong usado para dar importância ao texto
+
 }
