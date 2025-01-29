@@ -1,2 +1,16 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-alert('Começando o projeto');
+// Primeiro preciso criar as variáveis para guardar os nomes
+let amigos = [];
+
+//Função para adicionar um amigo
+function adicionarAmigo() {
+    const inputAmigo = document.getElementById('amigo');
+    const nomeAmigo = inputAmigo.ariaValueMax.trim();
+
+//Ter a certeza que o campo não ficou vazio
+if (nome === "") {
+    alert('Por favor, insira um nome.');
+    return;
+}
+  
+}
+
